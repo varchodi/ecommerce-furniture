@@ -1,5 +1,6 @@
 "use client"
-import { signIn,getProviders } from 'next-auth/react'
+import { BuiltInProviderType } from 'next-auth/providers';
+import { signIn,getProviders, LiteralUnion, ClientSafeProvider } from 'next-auth/react'
 import { useEffect, useState } from 'react';
 type Provider = {
     id: string;
@@ -14,7 +15,7 @@ type Providers = Record<string, Provider>;
   
 const GoogleBtn = () => {
     //look for avalaible providers
-    const [providers, setProviders] = useState<Providers|null >(null)
+    const [providers, setProviders] = useState<Record<LiteralUnion<BuiltInProviderType, string>, ClientSafeProvider> | null >(null)
     useEffect(() => {
         const fetchProviders = async () => {
           const res = await getProviders();
