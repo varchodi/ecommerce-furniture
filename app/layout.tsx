@@ -1,5 +1,3 @@
-"use client"
-
 import { CartContextProvider } from '@/context/cart.context'
 import './globals.css'
 import { Inter } from 'next/font/google'
