@@ -10,7 +10,7 @@ export const client = createClient({
   token:process.env.NEXT_SANITY_TOKEN!,
 })
 
-
+const node ="cool";
 const builder = imageUrlBuilder(client);
 
 export const urlFor = (s:SanityImageSource)=>(builder.image(s))
