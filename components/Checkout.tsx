@@ -5,7 +5,8 @@ import React,{useContext} from 'react'
 
 const Checkout = () => {
     const { state, dispatch } = useContext(cartContext);
-    const cart: StateType =JSON.parse( localStorage.getItem('cart')!)??state;
+    // const cart: StateType =JSON.parse( localStorage.getItem('cart')!)??state;
+    const cart: StateType =state;
   return (
     <section className='flex flex-col mt-4 place-items-end'>
         <article className='flex gap-2 place-items-center'>
