@@ -8,7 +8,8 @@ import { urlFor } from '@/db/sanity'
 
 const CartItems = () => {
     const { state, dispatch } = useContext(cartContext)
-    const cart: StateType =JSON.parse( localStorage.getItem('cart')!)??state;
+    // const cart: StateType =JSON.parse( localStorage.getItem('cart')!)??state;
+    const cart: StateType =state;
 
     // console.log('state is', state);
   return (
