@@ -11,7 +11,7 @@ export type StateType = {
 
 type ActionType = { type: "INCREMENT" | "DECREMENT" | "ADD" | "REMOVE", payload: furnitureType }
 
-// const localStorageCart: StateType = JSON.parse(localStorage.getItem("cart")!);
+ const localStorageCart: StateType = JSON.parse(localStorage.getItem("cart")!);
 
 const initialState:StateType= {
     items: [],
